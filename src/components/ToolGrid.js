@@ -3,8 +3,11 @@ import { Link } from'react-router-dom';
 function ToolGrid() {
 	const [items, setItems] = useState([]);
 	useEffect(() => {
+		const hostname = window.location.hostname;
+
+		const file = hostname === 'localhost' ? 'http://localhost:3000/tools.json' : 'https://jakeb0844.github.io/tools.json';
 		// Fetch the JSON data using the fetch API
-		fetch('http://localhost:3000/tools.json', {
+		fetch(file, {
 			method: 'GET',
 		})
 			.then((response) => response.json())
