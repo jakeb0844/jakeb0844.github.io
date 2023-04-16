@@ -1,20 +1,20 @@
-{
-	"Public Ip": {
+[
+	{
 		"name": "Public Ip",
 		"description": "Gets your public IP address",
-        "file":"/tools/public-ip.html",
-		"disabled": false
+		"file": "/tools/public-ip.html",
+		"enabled": true
 	},
-	"List to Array": {
+	{
 		"name": "List to Array",
 		"description": "Convert a list to most programming language array",
-        "file":"",
-		"disabled": true
+		"file": "",
+		"enabled": true
 	},
-	"Capitalize First Letter": {
+	{
 		"name": "Capitalize First Letter",
 		"description": "Capitalize the first letter of a string",
-        "file":"",
-		"disabled": true
+		"file": "",
+		"enabled": true
 	}
-}
+]
