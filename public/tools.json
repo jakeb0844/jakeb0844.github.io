@@ -16,5 +16,18 @@
 		"description": "Capitalize the first letter of a string",
 		"link": "",
 		"enabled": true
+	},
+	{
+		"name": "WoW BiS Items",
+		"description": "Find Best in Slot items for all World of Warcraft classes and specs",
+		"link": "wow",
+		"enabled": true
+	}
+	,
+	{
+		"name": "Raid Trinkets",
+		"description": "Find the S and A tier trinkets for each spec.",
+		"link": "raid-trinkets",
+		"enabled": true
 	}
 ]
