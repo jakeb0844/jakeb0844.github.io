@@ -55,7 +55,7 @@ const RaidTrinkets = () => {
 	};
 
 	const SpecCard = ({ spec, className, color }) => (
-		<div className='p-4 border rounded mb-2'>
+		<div className='p-4 border rounded mb-2' style={{width: '180px'}}>
 			<div className='font-semibold' style={{ color }}>
 				{className}
 			</div>
@@ -82,17 +82,18 @@ const RaidTrinkets = () => {
 			{hasResults ? (
 				<div
 					style={{
-						display: 'grid',
-						gridTemplateColumns: '1fr 1fr',
-						gap: '10px',
-						overflowY: 'auto',
-						maxHeight: '800px',
+						// display: 'grid',
+						// gridTemplateColumns: '1fr 1fr',
+						// gap: '10px',
+						// overflowY: 'auto',
+						// maxHeight: '800px',
 						padding: '10px',
 					}}
 				>
 					{/* S Tier Column */}
 					<div>
 						<h2 className='text-xl font-semibold mb-4'>S Tier</h2>
+						<div style={{display: 'flex', flexFlow: 'row wrap', gap: '4px'}}>
 						{results.sTier.length > 0 ? (
 							results.sTier.map((result, index) => (
 								<SpecCard
@@ -107,11 +108,13 @@ const RaidTrinkets = () => {
 								No specs found in S tier
 							</div>
 						)}
+						</div>
 					</div>
 
 					{/* A Tier Column */}
 					<div>
 						<h2 className='text-xl font-semibold mb-4'>A Tier</h2>
+						<div style={{display: 'flex', flexFlow: 'row wrap', gap: '4px'}}>
 						{results.aTier.length > 0 ? (
 							results.aTier.map((result, index) => (
 								<SpecCard
@@ -126,6 +129,7 @@ const RaidTrinkets = () => {
 								No specs found in A tier
 							</div>
 						)}
+						</div>
 					</div>
 				</div>
 			) : (
