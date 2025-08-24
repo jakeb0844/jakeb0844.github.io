@@ -20,6 +20,11 @@
           about your gear choices.
         </p>
       </Card>
+      <Card href="#">
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          Test
+        </h3>
+      </Card>
     </div>
   </div>
 </div>

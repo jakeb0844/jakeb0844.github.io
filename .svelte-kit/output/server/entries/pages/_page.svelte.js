@@ -55,6 +55,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-svelte-h="svelte-1dfsib1">Trinket Tier List</h3> <p class="text-gray-700 dark:text-gray-400" data-svelte-h="svelte-1bmz5ei">Stay up-to-date with the latest trinket rankings and make informed decisions
           about your gear choices.</p>`;
     }
+  })} ${validate_component(Card, "Card").$$render($$result, { href: "#" }, {}, {
+    default: () => {
+      return `<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-svelte-h="svelte-12ds6gi">Test</h3>`;
+    }
   })}</div></div></div>`;
 });
 export {
