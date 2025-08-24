@@ -55,7 +55,7 @@
     "src": "src/routes/+error.svelte"
   },
   "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout.c7393f65.css",
+    "file": "_app/immutable/assets/_layout.5d01eb47.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+layout.js": {
@@ -65,7 +65,7 @@
   },
   "src/routes/+layout.svelte": {
     "css": [
-      "_app/immutable/assets/_layout.c7393f65.css"
+      "_app/immutable/assets/_layout.5d01eb47.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [

@@ -274,14 +274,14 @@
 				</div>
 			{/if}
 			{#if searchTerm && !selectedTrinket}
-            <div
-            style="position:absolute; z-index: 1000; background-color: white; overflow-y: auto; max-height: 300px;"
-            class="w-full max-w-lg mx-auto bg-white/5 border border-black/20 rounded-lg p-2 shadow-sm"
-        >
+				<div
+					style="position:absolute; z-index: 1000; background-color: white; overflow-y: auto; max-height: 300px;"
+					class="w-full max-w-lg mx-auto bg-white/5 border border-black/20 rounded-lg p-2 shadow-sm"
+				>
 					{#each filteredTrinkets as t}
 						<button
-                        class="flex gap-1 w-full text-left hover:bg-white/10 transition-colors p-2 rounded hover:bg-black/10"
-                        on:click={() => {
+							class="flex gap-1 w-full text-left hover:bg-white/10 transition-colors p-2 rounded hover:bg-black/10"
+							on:click={() => {
 								selectedTrinket = t;
 								searchTerm = t.name || '';
 							}}
@@ -305,17 +305,6 @@
 			{/if}
 		</form>
 	</div>
-
-	{#if mode === 'spec'}
-		<!-- <div class="text-center mb-4">
-				<button
-					class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/20 transition-colors"
-					on:click={() => (showSpecs = !showSpecs)}
-				>
-					{showSpecs ? 'Hide spec icons' : 'Show spec icons'}
-				</button>
-			</div> -->
-	{/if}
 
 	{#if mode === 'spec'}
 		<div class="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
@@ -390,11 +379,15 @@
 								{tier.toUpperCase()} Tier
 							</h3>
 							{#if trinketTierResults[tier].length}
-								<ul class="list-disc list-inside space-y-1">
+								<div class="flex flex-wrap gap-2">
 									{#each trinketTierResults[tier] as s}
-										<li>{s.label}</li>
+										<SpecIcon
+											className={s.className}
+											specName={s.specName}
+											selected={false}
+										/>
 									{/each}
-								</ul>
+								</div>
 							{:else}
 								<p class="text-gray-400">No specs</p>
 							{/if}
