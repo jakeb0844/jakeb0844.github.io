@@ -3,7 +3,7 @@ import { F as Frame } from "../../chunks/Frame.js";
 import { twMerge } from "tailwind-merge";
 import { w as writable } from "../../chunks/index2.js";
 import { i as is_void } from "../../chunks/names.js";
-const app = "";
+const App = "";
 function quintOut(t) {
   return --t * t * t * t * t + 1;
 }
