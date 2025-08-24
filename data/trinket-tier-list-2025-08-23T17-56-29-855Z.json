@@ -1,6 +1,7 @@
 [
   {
     "name": "Blood",
+    "class": "Death Knight",
     "tierList": {
       "s": [
         {
@@ -175,6 +176,7 @@
   },
   {
     "name": "Frost",
+    "class": "Death Knight",
     "tierList": {
       "s": [
         {
@@ -318,6 +320,7 @@
   },
   {
     "name": "Unholy",
+    "class": "Death Knight",
     "tierList": {
       "s": [
         {
@@ -492,6 +495,7 @@
   },
   {
     "name": "Havoc",
+    "class": "Demon Hunter",
     "tierList": {
       "s": [
         {
@@ -612,6 +616,7 @@
   },
   {
     "name": "Vengeance",
+    "class": "Demon Hunter",
     "tierList": {
       "s": [
         {
@@ -768,6 +773,7 @@
   },
   {
     "name": "Balance",
+    "class": "Druid",
     "tierList": {
       "s": [
         {
@@ -888,6 +894,7 @@
   },
   {
     "name": "Feral",
+    "class": "Druid",
     "tierList": {
       "s": [
         {
@@ -995,6 +1002,7 @@
   },
   {
     "name": "Guardian",
+    "class": "Druid",
     "tierList": {
       "s": [
         {
@@ -1203,6 +1211,7 @@
   },
   {
     "name": "Restoration",
+    "class": "Druid",
     "tierList": {
       "s": [],
       "a": [
@@ -1327,6 +1336,7 @@
   },
   {
     "name": "Devastation",
+    "class": "Evoker",
     "tierList": {
       "s": [
         {
@@ -1471,6 +1481,7 @@
   },
   {
     "name": "Preservation",
+    "class": "Evoker",
     "tierList": {
       "s": [
         {
@@ -1596,6 +1607,7 @@
   },
   {
     "name": "Augmentation",
+    "class": "Evoker",
     "tierList": {
       "s": [
         {
@@ -1764,6 +1776,7 @@
   },
   {
     "name": "Beast Mastery",
+    "class": "Hunter",
     "tierList": {
       "s": [
         {
@@ -1890,6 +1903,7 @@
   },
   {
     "name": "Marksmanship",
+    "class": "Hunter",
     "tierList": {
       "s": [
         {
@@ -2041,6 +2055,7 @@
   },
   {
     "name": "Survival",
+    "class": "Hunter",
     "tierList": {
       "s": [
         {
@@ -2208,6 +2223,7 @@
   },
   {
     "name": "Arcane",
+    "class": "Mage",
     "tierList": {
       "s": [
         {
@@ -2316,6 +2332,7 @@
   },
   {
     "name": "Fire",
+    "class": "Mage",
     "tierList": {
       "s": [
         {
@@ -2478,6 +2495,7 @@
   },
   {
     "name": "Frost",
+    "class": "Mage",
     "tierList": {
       "s": [],
       "a": [
@@ -2650,6 +2668,7 @@
   },
   {
     "name": "Brewmaster",
+    "class": "Monk",
     "tierList": {
       "s": [
         {
@@ -2822,6 +2841,7 @@
   },
   {
     "name": "Mistweaver",
+    "class": "Monk",
     "tierList": {
       "s": [
         {
@@ -2929,6 +2949,7 @@
   },
   {
     "name": "Windwalker",
+    "class": "Monk",
     "tierList": {
       "s": [
         {
@@ -3085,6 +3106,7 @@
   },
   {
     "name": "Protection",
+    "class": "Paladin",
     "tierList": {
       "s": [
         {
@@ -3295,6 +3317,7 @@
   },
   {
     "name": "Retribution",
+    "class": "Paladin",
     "tierList": {
       "s": [
         {
@@ -3444,6 +3467,7 @@
   },
   {
     "name": "Holy",
+    "class": "Paladin",
     "tierList": {
       "s": [
         {
@@ -3581,6 +3605,7 @@
   },
   {
     "name": "Discipline",
+    "class": "Priest",
     "tierList": {
       "s": [
         {
@@ -3682,6 +3707,7 @@
   },
   {
     "name": "Shadow",
+    "class": "Priest",
     "tierList": {
       "s": [
         {
@@ -3796,6 +3822,7 @@
   },
   {
     "name": "Holy",
+    "class": "Priest",
     "tierList": {
       "s": [
         {
@@ -3897,6 +3924,7 @@
   },
   {
     "name": "Assassination",
+    "class": "Rogue",
     "tierList": {
       "s": [
         {
@@ -4082,6 +4110,7 @@
   },
   {
     "name": "Outlaw",
+    "class": "Rogue",
     "tierList": {
       "s": [
         {
@@ -4195,6 +4224,7 @@
   },
   {
     "name": "Subtlety",
+    "class": "Rogue",
     "tierList": {
       "s": [
         {
@@ -4326,6 +4356,7 @@
   },
   {
     "name": "Elemental",
+    "class": "Shaman",
     "tierList": {
       "s": [
         {
@@ -4451,6 +4482,7 @@
   },
   {
     "name": "Enhancement",
+    "class": "Shaman",
     "tierList": {
       "s": [
         {
@@ -4588,6 +4620,7 @@
   },
   {
     "name": "Restoration",
+    "class": "Shaman",
     "tierList": {
       "s": [
         {
@@ -4707,6 +4740,7 @@
   },
   {
     "name": "Affliction",
+    "class": "Warlock",
     "tierList": {
       "s": [
         {
@@ -4815,6 +4849,7 @@
   },
   {
     "name": "Demonology",
+    "class": "Warlock",
     "tierList": {
       "s": [
         {
@@ -4935,6 +4970,7 @@
   },
   {
     "name": "Destruction",
+    "class": "Warlock",
     "tierList": {
       "s": [
         {
@@ -5037,6 +5073,7 @@
   },
   {
     "name": "Arms",
+    "class": "Warrior",
     "tierList": {
       "s": [],
       "a": [],
@@ -5049,6 +5086,7 @@
   },
   {
     "name": "Fury",
+    "class": "Warrior",
     "tierList": {
       "s": [],
       "a": [],
@@ -5061,6 +5099,7 @@
   },
   {
     "name": "Protection",
+    "class": "Warrior",
     "tierList": {
       "s": [
         {

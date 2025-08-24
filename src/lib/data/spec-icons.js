@@ -120,9 +120,9 @@ export default {
         "large": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg"
     },
     "discipline_priest": {
-        "small": "https://wow.zamimg.com/images/wow/icons/small/spell_holy_auraoflight.jpg",
-        "medium": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_auraoflight.jpg",
-        "large": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg"
+        "small": "https://wow.zamimg.com/images/wow/icons/small/spell_holy_powerwordshield.jpg",
+        "medium": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordshield.jpg",
+        "large": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg"
     },
     "shadow_priest": {
         "small": "https://wow.zamimg.com/images/wow/icons/small/spell_shadow_shadowwordpain.jpg",
