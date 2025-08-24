@@ -1,0 +1,10 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/trinkets": [
+		"src/routes/trinkets/+page.server.js",
+		"src/routes/+layout.js"
+	]
+}
