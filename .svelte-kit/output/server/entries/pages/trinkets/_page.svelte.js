@@ -121,9 +121,9 @@ const specIcons = {
     "large": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg"
   },
   "discipline_priest": {
-    "small": "https://wow.zamimg.com/images/wow/icons/small/spell_holy_auraoflight.jpg",
-    "medium": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_auraoflight.jpg",
-    "large": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg"
+    "small": "https://wow.zamimg.com/images/wow/icons/small/spell_holy_powerwordshield.jpg",
+    "medium": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordshield.jpg",
+    "large": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg"
   },
   "shadow_priest": {
     "small": "https://wow.zamimg.com/images/wow/icons/small/spell_shadow_shadowwordpain.jpg",
@@ -448,17 +448,31 @@ const classes = [
   }
 ];
 function refreshWowheadTooltips() {
-  if (window.$WowheadPower) {
+  if (window && window.$WowheadPower) {
     window.$WowheadPower.refreshLinks();
   }
 }
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let filteredSpecs;
+  let hasTierItems;
   let { data } = $$props;
   const trinketData = data.trinketData;
   let selectedSpec = "";
   let currentTierList = null;
   let searchTerm = "";
+  const allTrinketsMap = /* @__PURE__ */ new Map();
+  for (const spec of trinketData) {
+    if (!spec.tierList)
+      continue;
+    for (const tierKey of Object.keys(spec.tierList)) {
+      for (const t of spec.tierList[tierKey] || []) {
+        const key = (t.name || "").toLowerCase();
+        if (!allTrinketsMap.has(key))
+          allTrinketsMap.set(key, t);
+      }
+    }
+  }
+  const allTrinkets = Array.from(allTrinketsMap.values());
   const specs = classes.flatMap((c) => c.specs.map((s) => ({
     className: c.name,
     specName: s.name,
@@ -466,46 +480,54 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })));
   const tiers = ["s", "a", "b", "c", "d", "f"];
   const tierColors = {
-    "s": "text-yellow-400",
-    "a": "text-purple-400",
-    "b": "text-blue-400",
-    "c": "text-green-400",
-    "d": "text-orange-400",
-    "f": "text-red-400"
+    s: "text-yellow-400",
+    a: "text-purple-400",
+    b: "text-blue-400",
+    c: "text-green-400",
+    d: "text-orange-400",
+    f: "text-red-400"
   };
   function selectSpec(specName) {
+    console.log("onclick", specName);
     selectedSpec = selectedSpec === specName ? "" : specName;
   }
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   filteredSpecs = specs.filter((spec) => `${spec.className} ${spec.specName}`.toLowerCase().includes(searchTerm.toLowerCase()));
+  allTrinkets.filter((t) => (t.name || "").toLowerCase().includes(searchTerm.toLowerCase()));
   {
     if (selectedSpec) {
-      currentTierList = trinketData.find((spec) => spec.name === selectedSpec)?.tierList ?? null;
+      console.log(selectedSpec);
+      currentTierList = trinketData.find((spec) => `${spec.class} ${spec.name}` === selectedSpec)?.tierList ?? null;
     }
   }
+  hasTierItems = !!currentTierList && tiers.some((tier) => (currentTierList[tier]?.length || 0) > 0);
   {
     if (currentTierList) {
       setTimeout(refreshWowheadTooltips, 100);
     }
   }
-  return `<div class="container mx-auto px-4 py-8"><h1 class="text-4xl font-bold mb-8 text-center" data-svelte-h="svelte-qpmybf">WoW Trinket Tier List</h1> <div class="mb-8"><div class="relative max-w-xl mx-auto mb-4"><input type="text" placeholder="Search specs..." class="w-full p-2 pl-8 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"${add_attribute("value", searchTerm, 0)}> <svg class="w-4 h-4 absolute left-2 top-3 text-white/50" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg></div> <div class="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">${each(filteredSpecs, (spec) => {
+  return `<div class="container mx-auto px-4 py-8"><h1 class="text-4xl font-bold mb-8 text-center" data-svelte-h="svelte-qpmybf">WoW Trinket Tier List</h1> <div class="mb-8"><form style="position:relative;" class="max-w-lg mx-auto" autocomplete="off"><div class="flex"><label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white" data-svelte-h="svelte-kne9ig">Search</label> <div class="relative"><button id="dropdown-button" class="shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">${escape("Specs")} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button> ${``}</div> <div class="relative w-full"><input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"${add_attribute(
+    "placeholder",
+    "Search specs...",
+    0
+  )}${add_attribute("value", searchTerm, 0)}> <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-svelte-h="svelte-ywcfh0"><svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path></svg> <span class="sr-only">Search</span></button></div></div> ${``}</form></div> ${``} ${`<div class="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">${each(filteredSpecs, (spec) => {
     return `${validate_component(SpecIcon, "SpecIcon").$$render(
       $$result,
       {
         className: spec.className,
         specName: spec.specName,
-        selected: selectedSpec === spec.specName,
-        onClick: () => selectSpec(spec.specName)
+        selected: selectedSpec === `${spec.className} ${spec.specName}`,
+        onClick: () => selectSpec(`${spec.className} ${spec.specName}`)
       },
       {},
       {}
     )}`;
-  })}</div></div> ${currentTierList ? `<div class="space-y-8">${each(tiers, (tier) => {
+  })}</div>`} ${``} ${hasTierItems ? `<div class="space-y-8">${each(tiers, (tier) => {
     return `${currentTierList[tier]?.length ? `<div class="tier-section"><h2 class="${"text-2xl font-bold mb-4 " + escape(tierColors[tier], true)}">${escape(tier.toUpperCase())} Tier</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">${each(currentTierList[tier] || [], (trinket) => {
       return `<div class="trinket-card bg-white/5 backdrop-blur-sm p-4 rounded-lg flex items-center space-x-4 hover:bg-white/10 transition-colors"><img${add_attribute("src", trinket.iconUrl, 0)}${add_attribute("alt", trinket.name, 0)} class="w-12 h-12"> <a${add_attribute("href", trinket.href, 0)}${add_attribute("data-wowhead", `item=${trinket.id}`, 0)} class="text-blue-400 hover:text-blue-300">${escape(trinket.name)}</a> </div>`;
     })}</div> </div>` : ``}`;
-  })}</div>` : `${selectedSpec ? `<p class="text-center text-gray-400">No tier list data available for ${escape(selectedSpec)}</p>` : `<p class="text-center text-gray-400" data-svelte-h="svelte-1p0d1p">Select a spec to view its trinket tier list</p>`}`}</div>`;
+  })}</div>` : `${selectedSpec ? `<p class="text-center">No tier list data available for ${escape(selectedSpec)}</p>` : ``}`}</div>`;
 });
 export {
   Page as default

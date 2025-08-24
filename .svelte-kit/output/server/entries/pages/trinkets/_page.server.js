@@ -2,6 +2,7 @@ import "../../../chunks/index.js";
 const trinketData = [
   {
     name: "Blood",
+    "class": "Death Knight",
     tierList: {
       s: [
         {
@@ -176,6 +177,7 @@ const trinketData = [
   },
   {
     name: "Frost",
+    "class": "Death Knight",
     tierList: {
       s: [
         {
@@ -319,6 +321,7 @@ const trinketData = [
   },
   {
     name: "Unholy",
+    "class": "Death Knight",
     tierList: {
       s: [
         {
@@ -493,6 +496,7 @@ const trinketData = [
   },
   {
     name: "Havoc",
+    "class": "Demon Hunter",
     tierList: {
       s: [
         {
@@ -613,6 +617,7 @@ const trinketData = [
   },
   {
     name: "Vengeance",
+    "class": "Demon Hunter",
     tierList: {
       s: [
         {
@@ -769,6 +774,7 @@ const trinketData = [
   },
   {
     name: "Balance",
+    "class": "Druid",
     tierList: {
       s: [
         {
@@ -889,6 +895,7 @@ const trinketData = [
   },
   {
     name: "Feral",
+    "class": "Druid",
     tierList: {
       s: [
         {
@@ -996,6 +1003,7 @@ const trinketData = [
   },
   {
     name: "Guardian",
+    "class": "Druid",
     tierList: {
       s: [
         {
@@ -1204,6 +1212,7 @@ const trinketData = [
   },
   {
     name: "Restoration",
+    "class": "Druid",
     tierList: {
       s: [],
       a: [
@@ -1328,6 +1337,7 @@ const trinketData = [
   },
   {
     name: "Devastation",
+    "class": "Evoker",
     tierList: {
       s: [
         {
@@ -1472,6 +1482,7 @@ const trinketData = [
   },
   {
     name: "Preservation",
+    "class": "Evoker",
     tierList: {
       s: [
         {
@@ -1597,6 +1608,7 @@ const trinketData = [
   },
   {
     name: "Augmentation",
+    "class": "Evoker",
     tierList: {
       s: [
         {
@@ -1765,6 +1777,7 @@ const trinketData = [
   },
   {
     name: "Beast Mastery",
+    "class": "Hunter",
     tierList: {
       s: [
         {
@@ -1891,6 +1904,7 @@ const trinketData = [
   },
   {
     name: "Marksmanship",
+    "class": "Hunter",
     tierList: {
       s: [
         {
@@ -2042,6 +2056,7 @@ const trinketData = [
   },
   {
     name: "Survival",
+    "class": "Hunter",
     tierList: {
       s: [
         {
@@ -2209,6 +2224,7 @@ const trinketData = [
   },
   {
     name: "Arcane",
+    "class": "Mage",
     tierList: {
       s: [
         {
@@ -2317,6 +2333,7 @@ const trinketData = [
   },
   {
     name: "Fire",
+    "class": "Mage",
     tierList: {
       s: [
         {
@@ -2479,6 +2496,7 @@ const trinketData = [
   },
   {
     name: "Frost",
+    "class": "Mage",
     tierList: {
       s: [],
       a: [
@@ -2651,6 +2669,7 @@ const trinketData = [
   },
   {
     name: "Brewmaster",
+    "class": "Monk",
     tierList: {
       s: [
         {
@@ -2823,6 +2842,7 @@ const trinketData = [
   },
   {
     name: "Mistweaver",
+    "class": "Monk",
     tierList: {
       s: [
         {
@@ -2930,6 +2950,7 @@ const trinketData = [
   },
   {
     name: "Windwalker",
+    "class": "Monk",
     tierList: {
       s: [
         {
@@ -3086,6 +3107,7 @@ const trinketData = [
   },
   {
     name: "Protection",
+    "class": "Paladin",
     tierList: {
       s: [
         {
@@ -3296,6 +3318,7 @@ const trinketData = [
   },
   {
     name: "Retribution",
+    "class": "Paladin",
     tierList: {
       s: [
         {
@@ -3445,6 +3468,7 @@ const trinketData = [
   },
   {
     name: "Holy",
+    "class": "Paladin",
     tierList: {
       s: [
         {
@@ -3582,6 +3606,7 @@ const trinketData = [
   },
   {
     name: "Discipline",
+    "class": "Priest",
     tierList: {
       s: [
         {
@@ -3683,6 +3708,7 @@ const trinketData = [
   },
   {
     name: "Shadow",
+    "class": "Priest",
     tierList: {
       s: [
         {
@@ -3797,6 +3823,7 @@ const trinketData = [
   },
   {
     name: "Holy",
+    "class": "Priest",
     tierList: {
       s: [
         {
@@ -3898,6 +3925,7 @@ const trinketData = [
   },
   {
     name: "Assassination",
+    "class": "Rogue",
     tierList: {
       s: [
         {
@@ -4083,6 +4111,7 @@ const trinketData = [
   },
   {
     name: "Outlaw",
+    "class": "Rogue",
     tierList: {
       s: [
         {
@@ -4196,6 +4225,7 @@ const trinketData = [
   },
   {
     name: "Subtlety",
+    "class": "Rogue",
     tierList: {
       s: [
         {
@@ -4327,6 +4357,7 @@ const trinketData = [
   },
   {
     name: "Elemental",
+    "class": "Shaman",
     tierList: {
       s: [
         {
@@ -4452,6 +4483,7 @@ const trinketData = [
   },
   {
     name: "Enhancement",
+    "class": "Shaman",
     tierList: {
       s: [
         {
@@ -4589,6 +4621,7 @@ const trinketData = [
   },
   {
     name: "Restoration",
+    "class": "Shaman",
     tierList: {
       s: [
         {
@@ -4708,6 +4741,7 @@ const trinketData = [
   },
   {
     name: "Affliction",
+    "class": "Warlock",
     tierList: {
       s: [
         {
@@ -4816,6 +4850,7 @@ const trinketData = [
   },
   {
     name: "Demonology",
+    "class": "Warlock",
     tierList: {
       s: [
         {
@@ -4936,6 +4971,7 @@ const trinketData = [
   },
   {
     name: "Destruction",
+    "class": "Warlock",
     tierList: {
       s: [
         {
@@ -5038,6 +5074,7 @@ const trinketData = [
   },
   {
     name: "Arms",
+    "class": "Warrior",
     tierList: {
       s: [],
       a: [],
@@ -5050,6 +5087,7 @@ const trinketData = [
   },
   {
     name: "Fury",
+    "class": "Warrior",
     tierList: {
       s: [],
       a: [],
@@ -5062,6 +5100,7 @@ const trinketData = [
   },
   {
     name: "Protection",
+    "class": "Warrior",
     tierList: {
       s: [
         {
