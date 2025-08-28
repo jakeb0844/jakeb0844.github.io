@@ -1,30 +1,36 @@
 <script>
-  import { Card } from 'flowbite-svelte';
+	import { Card } from 'flowbite-svelte';
+	import Rss from '$lib/components/rss.svelte';
 </script>
 
 <div class="min-h-screen">
-  <!-- Hero Section with Header Image -->
-  <div class="relative h-[400px] mb-12 overflow-hidden" style="background-image: url('wow-background.jpg'); background-size: cover; background-position: center;">
-  </div>
+	<!-- Hero Section with Header Image -->
+	<div
+		class="relative h-[400px] mb-12 overflow-hidden"
+		style="background-image: url('wow-background.jpg'); background-size: cover; background-position: center 52%;"
+	/>
 
-  <!-- Main Content -->
-  <div class="w-full px-6">
-    <!-- Feature Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-      <Card href="/trinkets">
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-          Trinket Tier List
-        </h3>
-        <p class="text-gray-700 dark:text-gray-400">
-          Stay up-to-date with the latest trinket rankings and make informed decisions
-          about your gear choices.
-        </p>
-      </Card>
-      <Card href="#">
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
-          Test
-        </h3>
-      </Card>
-    </div>
-  </div>
+	<div class="px-6 pb-6 w-full">
+		<Rss title="Latest Wowhead News" />
+	</div>
+
+	<!-- Main Content -->
+	<div class="p-6 w-full">
+		<!-- Feature Cards -->
+		<div
+			class="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+		>
+			<Card href="/trinkets">
+				<h3
+					class="mb-2 text-xl font-bold text-gray-900 dark:text-white"
+				>
+					Trinket Tier List
+				</h3>
+				<p class="text-gray-700 dark:text-gray-400">
+					Stay up-to-date with the latest trinket rankings and make
+					informed decisions about your gear choices.
+				</p>
+			</Card>
+		</div>
+	</div>
 </div>

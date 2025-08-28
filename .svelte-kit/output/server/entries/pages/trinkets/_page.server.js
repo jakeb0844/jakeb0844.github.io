@@ -1293,7 +1293,7 @@ const trinketData = [
         {
           id: "210816",
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_10_alchemy_alchemystone_color4.jpg",
-          href: "https://www.wowhead.com/item=210816/?bonus=[=gv-crafting",
+          href: "https://www.wowhead.com/item=210816/?bonus=9627:12053:12050:12053",
           name: "Algari Alchemist Stone"
         }
       ],
@@ -2238,6 +2238,12 @@ const trinketData = [
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_devourersmallmount_light.jpg",
           href: "https://www.wowhead.com/item=242497/azhiccaran-parapodia?bonus=657:12052:5877:10390:12361:12053",
           name: "Azhiccaran Parapodia"
+        },
+        {
+          id: "242392",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_intdps_ancientkareshirelic.jpg",
+          href: "https://www.wowhead.com/item=242392/diamantine-voidcore?bonus=7981:12052:5877:12361:12053",
+          name: "Diamantine Voidcore"
         }
       ],
       a: [
@@ -2507,6 +2513,12 @@ const trinketData = [
           name: "Astral Antenna"
         },
         {
+          id: "242398",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_soulbinderbossinttrinket.jpg",
+          href: "https://www.wowhead.com/item=242398/naazindhris-mystic-lash",
+          name: "Naazindhri's Mystic Lash"
+        },
+        {
           id: "242402",
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_trinkettechnomancer_ritualengine.jpg",
           href: "https://www.wowhead.com/item=242402/arazs-ritual-forge",
@@ -2543,16 +2555,10 @@ const trinketData = [
           name: "Ara-Kara Sacbrood"
         },
         {
-          id: "219312",
-          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_arathordungeon_fragment_color5.jpg",
-          href: "https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj",
-          name: "Empowering Crystal of Anub'ikkaj"
-        },
-        {
-          id: "190958",
-          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_60pvp_trinket1d.jpg",
-          href: "https://www.wowhead.com/item=190958/soleahs-secret-technique",
-          name: "So'leah's Secret Technique"
+          id: "185846",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_paperpackage01b.jpg",
+          href: "https://www.wowhead.com/item=185846/miniscule-mailemental-in-an-envelope",
+          name: "Miniscule Mailemental in an Envelope"
         },
         {
           id: "238390",
@@ -2563,10 +2569,10 @@ const trinketData = [
       ],
       b: [
         {
-          id: "242398",
-          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_soulbinderbossinttrinket.jpg",
-          href: "https://www.wowhead.com/item=242398/naazindhris-mystic-lash",
-          name: "Naazindhri's Mystic Lash"
+          id: "219312",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_arathordungeon_fragment_color5.jpg",
+          href: "https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj",
+          name: "Empowering Crystal of Anub'ikkaj"
         },
         {
           id: "219308",
@@ -2575,16 +2581,10 @@ const trinketData = [
           name: "Signet of the Priory"
         },
         {
-          id: "232545",
-          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_engineering_90_lightningbox.jpg",
-          href: "https://www.wowhead.com/item=232545/gigazaps-zapcap",
-          name: "Gigazap's Zap-Cap"
-        },
-        {
-          id: "185846",
-          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_paperpackage01b.jpg",
-          href: "https://www.wowhead.com/item=185846/miniscule-mailemental-in-an-envelope",
-          name: "Miniscule Mailemental in an Envelope"
+          id: "190958",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_60pvp_trinket1d.jpg",
+          href: "https://www.wowhead.com/item=190958/soleahs-secret-technique",
+          name: "So'leah's Secret Technique"
         },
         {
           id: "246945",
@@ -2605,6 +2605,12 @@ const trinketData = [
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_arathordungeon_bell_color1.jpg",
           href: "https://www.wowhead.com/item=219313/mereldars-toll",
           name: "Mereldar's Toll"
+        },
+        {
+          id: "232545",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_engineering_90_lightningbox.jpg",
+          href: "https://www.wowhead.com/item=232545/gigazaps-zapcap",
+          name: "Gigazap's Zap-Cap"
         },
         {
           id: "178826",
@@ -3387,6 +3393,12 @@ const trinketData = [
         }
       ],
       c: [
+        {
+          id: "230638",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/spell_holy_championsbond.jpg",
+          href: "https://www.wowhead.com/item=230638/?bonus=12034:12297:1592:10255",
+          name: "Astral Gladiator's Badge of Ferocity"
+        },
         {
           id: "242396",
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_voidprism.jpg",
@@ -4239,15 +4251,15 @@ const trinketData = [
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_trinkettechnomancer_ritualengine.jpg",
           href: "https://www.wowhead.com/item=242402/arazs-ritual-forge?bonus=7981:12052:5877:12361:12053",
           name: "Araz's Ritual Forge"
-        },
+        }
+      ],
+      a: [
         {
           id: "242494",
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_herb_karesh.jpg",
           href: "https://www.wowhead.com/item=242494/lily-of-the-eternal-weave?bonus=657:12052:5877:10390:12361:12053",
           name: "Lily of the Eternal Weave"
-        }
-      ],
-      a: [
+        },
         {
           id: "219312",
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_arathordungeon_fragment_color5.jpg",
@@ -4440,7 +4452,7 @@ const trinketData = [
           id: "238390",
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_110.jpg",
           href: "https://www.wowhead.com/item=238390?bonus=657:12042:5910:12355",
-          name: "Soulbreaker's Sigil"
+          name: "Unknown Item"
         },
         {
           id: "246945",
@@ -5120,6 +5132,12 @@ const trinketData = [
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/ability_blackhand_attachedslagbombs.jpg",
           href: "https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=657:12052:5877:10390:12361:12053",
           name: "Improvised Seaforium Pacemaker"
+        },
+        {
+          id: "242395",
+          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_silkwormsantenna.jpg",
+          href: "https://www.wowhead.com/ptr-2/item=242395/astral-antenna?bonus=7981:12052:5877:12361:12053",
+          name: "Astral Antenna"
         }
       ],
       a: [
@@ -5128,12 +5146,6 @@ const trinketData = [
           iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_raid_mercurialegg_red.jpg",
           href: "https://www.wowhead.com/ptr-2/item=219314/ara-kara-sacbrood?bonus=657:12052:5877:10390:12361:12053",
           name: "Ara-Kara Sacbrood"
-        },
-        {
-          id: "242395",
-          iconUrl: "https://wow.zamimg.com/images/wow/icons/large/inv_112_raidtrinkets_silkwormsantenna.jpg",
-          href: "https://www.wowhead.com/ptr-2/item=242395/astral-antenna?bonus=7981:12052:5877:12361:12053",
-          name: "Astral Antenna"
         },
         {
           id: "242396",

@@ -10,7 +10,7 @@ return {
 	assets: new Set([".nojekyll","favicon.png","trinket-tier-list-2025-08-23T17-56-29-855Z.json","wow-background.jpg","wow-tww.jpg"]),
 	mimeTypes: {".png":"image/png",".json":"application/json",".jpg":"image/jpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.251de819.js","app":"_app/immutable/entry/app.fa1aaa52.js","imports":["_app/immutable/entry/start.251de819.js","_app/immutable/chunks/scheduler.f361f0d6.js","_app/immutable/chunks/singletons.62085717.js","_app/immutable/chunks/index.0e8d977f.js","_app/immutable/entry/app.fa1aaa52.js","_app/immutable/chunks/scheduler.f361f0d6.js","_app/immutable/chunks/index.391732f9.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.1acf1a91.js","app":"_app/immutable/entry/app.84620013.js","imports":["_app/immutable/entry/start.1acf1a91.js","_app/immutable/chunks/scheduler.f361f0d6.js","_app/immutable/chunks/singletons.094f5d00.js","_app/immutable/chunks/index.0e8d977f.js","_app/immutable/entry/app.84620013.js","_app/immutable/chunks/scheduler.f361f0d6.js","_app/immutable/chunks/index.4f6c82e9.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js'))
