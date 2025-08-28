@@ -6,7 +6,7 @@
 <div class="min-h-screen">
 	<!-- Hero Section with Header Image -->
 	<div
-		class="relative h-[400px] mb-12 overflow-hidden"
+		class="relative h-[600px] mb-12 overflow-hidden"
 		style="background-image: url('wow-background.jpg'); background-size: cover; background-position: center 52%;"
 	/>
 
@@ -15,7 +15,7 @@
 	</div>
 
 	<!-- Main Content -->
-	<div class="p-6 w-full">
+	<div class="p-6 mx-auto w-full md:w-3/4">
 		<!-- Feature Cards -->
 		<div
 			class="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
