@@ -5,6 +5,7 @@
 	 * @property {string} link
 	 * @property {string} pubDate
 	 * @property {string} description
+	 * @property {string} [category]
 	 */
 
 	/** @type {NewsItem[]} */
@@ -13,43 +14,53 @@
 </script>
 
 <div class="w-full">
-	<h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-		{title}
-	</h2>
+	<div class="flex gap-4 items-baseline">
+		<h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white" style="font-family: Cinzel, serif;">
+			{title}
+		</h2>
+
+		<a
+			class="px-2 py-1 text-xs font-semibold rounded border border-wow-gold/50 text-wow-lightgold hover:text-wow-offwhite hover:bg-wow-gold/20 hover:border-wow-gold/80 transition-colors"
+			href="https://www.wowhead.com/news"
+			target="_blank">View all →</a>
+	</div>
 	{#if items && items.length}
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
-			{#each items as item}
-				<a
-					href={item.link}
-					rel="noopener noreferrer"
-					target="_blank"
-					class="block h-full transition-transform hover:-translate-y-1"
-				>
-					<div
-						class="flex flex-col p-3 h-full rounded-lg border border-gray-200 transition-colors dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500"
+			{#each items as item, i}
+				{#if item.title.includes('Diablo') === false}
+					<a
+						href={item.link}
+						rel="noopener noreferrer"
+						target="_blank"
+						class="group block h-full transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-wow-gold/50 rounded-lg"
 					>
 						<div
-							style="font-size: 12px;"
-							class="text-base font-semibold text-blue-700 line-clamp-2 dark:text-blue-400"
-						>{item.title}</div>
-						{#if item.pubDate}
+							class={`flex flex-col p-3 h-full rounded-lg border transition-all duration-200 ease-in-out backdrop-blur-sm hover:shadow-glow-green hover:scale-[1.02] ${i % 2 === 0 ? 'bg-wow-navy/80' : 'bg-wow-teal/80'} border-wow-gold/20 hover:border-wow-gold/60`}
+						>
+							{#if item.category}
+								<span class="text-[10px] uppercase tracking-wide text-wow-lightgold/80"
+									>{item.category}</span
+								>
+							{/if}
+
 							<div
-								style="font-size: 10px;"
-								class="mt-1 text-gray-500"
+								style="font-size: 12px;"
+								class="text-base font-semibold text-wow-lightgold line-clamp-2 group-hover:text-wow-offwhite"
 							>
-								{new Date(item.pubDate).toLocaleString()}
+								{item.title}
 							</div>
-						{/if}
-					</div>
-				</a>
+							{#if item.pubDate}
+								<div
+									style="font-size: 10px;"
+									class="mt-1 text-wow-green"
+								>
+									{new Date(item.pubDate).toLocaleString()}
+								</div>
+							{/if}
+						</div>
+					</a>
+				{/if}
 			{/each}
-		</div>
-		<div class="mt-4">
-			<a
-				class="text-xs font-semibold text-blue-700 line-clamp-2 hover:underline dark:text-blue-400"
-				href="https://www.wowhead.com/news"
-				target="_blank">View all &roarr;</a
-			>
 		</div>
 	{:else}
 		<div class="text-gray-600 dark:text-gray-300">No news available.</div>

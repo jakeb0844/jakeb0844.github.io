@@ -35,7 +35,8 @@ export const load = async () => {
         title: decode(item.title || ''),
         link: (item.link || '').trim(),
         pubDate: item.pubDate ? new Date(item.pubDate).toISOString() : '',
-        description: item.description || ''
+        description: item.description || '',
+        category: item.category || '',
       }));
 
     return {
