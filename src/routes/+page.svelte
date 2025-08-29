@@ -1,6 +1,9 @@
 <script>
 	import { Card } from 'flowbite-svelte';
 	import Rss from '$lib/components/rss.svelte';
+
+	/** @type {import('./$types').PageData} */
+	export let data;
 </script>
 
 <div class="min-h-screen">
@@ -11,6 +14,17 @@
 	/>
 
 	<div class="px-6 pb-6 w-full">
+		<Card class="mb-6">
+			<h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+				Server Test Data
+			</h3>
+			<div class="text-gray-700 dark:text-gray-400">
+				<p>Message: {data.message}</p>
+				<p>Server Time: {data.serverTime}</p>
+				<p>Environment: {data.environment}</p>
+			</div>
+		</Card>
+
 		<Rss title="Latest Wowhead News" />
 	</div>
 

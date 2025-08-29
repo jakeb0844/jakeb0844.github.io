@@ -1,4 +1,9 @@
-// Intentionally left empty to avoid server-side data loading; client-side fetch is used.
-export const prerender = true;
-
+export const load = async () => {
+  // This is a simple server-side function that returns test data
+  return {
+    serverTime: new Date().toISOString(),
+    message: 'Hello from Vercel server!',
+    environment: process.env.VERCEL ? 'Vercel' : 'Local'
+  };
+};
 
