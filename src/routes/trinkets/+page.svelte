@@ -128,9 +128,9 @@
   }
 </script>
 
-<div class="container mx-auto px-4 py-8">
+<div class="container px-4 py-8 mx-auto">
   <h1
-    class="text-4xl font-bold mb-8 text-center text-wow-navy"
+    class="mb-8 text-4xl font-bold text-center text-wow-navy"
     style="font-family: Cinzel, serif;"
   >
     WoW Trinket Tier List
@@ -141,7 +141,7 @@
   >
     <form
       style="position:relative;"
-      class="max-w-lg mx-auto"
+      class="mx-auto max-w-lg"
       on:submit|preventDefault
       autocomplete="off"
     >
@@ -154,7 +154,7 @@
         <div class="relative">
           <button
             id="dropdown-button"
-            class="shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-wow-offwhite bg-wow-navy border border-wow-gold/40 rounded-s-lg hover:bg-wow-teal focus:outline-none"
+            class="inline-flex z-10 items-center px-4 py-2.5 text-sm font-medium text-center border shrink-0 text-wow-offwhite bg-wow-navy border-wow-gold/40 rounded-s-lg hover:bg-wow-teal focus:outline-none"
             type="button"
             on:click={() => (dropdownOpen = !dropdownOpen)}
           >
@@ -178,7 +178,7 @@
           {#if dropdownOpen}
             <div
               id="dropdown"
-              class="z-10 bg-wow-parchment border border-wow-gold/30 rounded-lg shadow-sm w-44 absolute mt-1"
+              class="absolute z-10 mt-1 w-44 rounded-lg border shadow-sm bg-wow-parchment border-wow-gold/30"
             >
               <ul
                 class="py-2 text-sm text-wow-navy"
@@ -187,7 +187,7 @@
                 <li>
                   <button
                     type="button"
-                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="inline-flex px-4 py-2 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     on:click={() => {
                       mode = "spec";
                       selectedTrinket = null;
@@ -199,7 +199,7 @@
                 <li>
                   <button
                     type="button"
-                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="inline-flex px-4 py-2 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     on:click={() => {
                       mode = "trinket";
                       selectedSpec = "";
@@ -217,7 +217,7 @@
           <input
             type="search"
             id="search-dropdown"
-            class="block p-2.5 w-full z-20 text-sm text-wow-navy bg-wow-parchment rounded-e-lg border border-wow-gold/40 focus:ring-0 focus:border-wow-gold"
+            class="block z-20 p-2.5 w-full text-sm border text-wow-navy bg-wow-parchment rounded-e-lg border-wow-gold/40 focus:ring-0 focus:border-wow-gold"
             placeholder={mode === "spec"
               ? "Search specs..."
               : "Search trinkets..."}
@@ -234,7 +234,7 @@
           />
           <button
             type="submit"
-            class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-wow-offwhite bg-wow-navy rounded-e-lg border border-wow-gold/40 hover:bg-wow-teal focus:outline-none"
+            class="absolute top-0 p-2.5 h-full text-sm font-medium border end-0 text-wow-offwhite bg-wow-navy rounded-e-lg border-wow-gold/40 hover:bg-wow-teal focus:outline-none"
           >
             <svg
               class="w-4 h-4"
@@ -258,11 +258,11 @@
       {#if mode === "spec" && searchTerm && !selectedSpec}
         <div
           style="position:absolute; z-index: 1000; background-color: white; overflow-y: auto; max-height: 300px;"
-          class="w-full max-w-lg mx-auto bg-white/5 border border-black/20 rounded-lg p-2 shadow-sm"
+          class="p-2 mx-auto w-full max-w-lg rounded-lg border shadow-sm bg-white/5 border-black/20"
         >
           {#each filteredSpecs as s}
             <button
-              class="w-full text-left transition-colors p-2 rounded hover:bg-wow-parchment/60"
+              class="p-2 w-full text-left rounded transition-colors hover:bg-wow-parchment/60"
               on:click={() => {
                 selectedSpec = `${s.className} ${s.specName}`;
                 searchTerm = `${s.className} ${s.specName}`;
@@ -282,11 +282,11 @@
       {#if searchTerm && !selectedTrinket}
         <div
           style="position:absolute; z-index: 1000; background-color: white; overflow-y: auto; max-height: 300px;"
-          class="w-full max-w-lg mx-auto bg-white/5 border border-black/20 rounded-lg p-2 shadow-sm"
+          class="p-2 mx-auto w-full max-w-lg rounded-lg border shadow-sm bg-white/5 border-black/20"
         >
           {#each filteredTrinkets as t}
             <button
-              class="flex gap-1 w-full text-left transition-colors p-2 rounded hover:bg-wow-parchment/60"
+              class="flex gap-1 p-2 w-full text-left rounded transition-colors hover:bg-wow-parchment/60"
               on:click={() => {
                 selectedTrinket = t;
                 searchTerm = t.name || "";
@@ -309,7 +309,7 @@
   </div>
 
   {#if mode === "spec"}
-    <div class="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+    <div class="flex flex-wrap gap-4 justify-center mx-auto max-w-6xl">
       {#each filteredSpecs as spec (`${spec.className}-${spec.specName}`)}
         <SpecIcon
           className={spec.className}
@@ -322,7 +322,7 @@
   {/if}
 
   {#if mode === "trinket"}
-    <div class="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+    <div class="flex flex-wrap gap-4 justify-center mx-auto max-w-6xl">
       {#each filteredTrinkets as t ((t.name || "").toLowerCase())}
         <button
           class="spec-icon-wrapper relative w-12 h-12 rounded-lg overflow-hidden transition-all duration-200 {selectedTrinket &&
@@ -339,7 +339,7 @@
         >
           {#if !t.iconUrl}
             <div
-              class="absolute inset-0 bg-black/30 flex items-center justify-center text-white/50"
+              class="flex absolute inset-0 justify-center items-center bg-black/30 text-white/50"
             >
               ?
             </div>
@@ -349,8 +349,8 @@
     </div>
 
     {#if selectedTrinket}
-      <div class="max-w-3xl mx-auto mt-6">
-        <div class="flex items-center gap-3 mb-6">
+      <div class="mx-auto mt-6 max-w-3xl">
+        <div class="flex gap-3 items-center mb-6">
           <img
             src={selectedTrinket.iconUrl}
             alt={selectedTrinket.name}
@@ -401,7 +401,7 @@
             <h2 class="text-2xl font-bold mb-4 {tierColors[tier]}">
               {tier.toUpperCase()} Tier
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {#each currentTierList[tier] || [] as trinket}
                 <div
                   class="trinket-card bg-wow-parchment/90 backdrop-blur-sm p-4 rounded-lg flex items-center space-x-4 border border-wow-gold/20 hover:bg-wow-parchment shadow-sm transition-transform hover:scale-[1.01]"

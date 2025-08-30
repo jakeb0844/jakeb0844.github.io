@@ -1,8 +1,14 @@
 {
-  "/": [
-    "src/routes/+page.server.js",
-    "src/routes/+layout.js",
-    "src/routes/+layout.js"
-  ],
-  "/trinkets": ["src/routes/trinkets/+page.server.js", "src/routes/+layout.js"]
+	"/": [
+		"src/routes/+page.server.js",
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/specs": [
+		"src/routes/+layout.js"
+	],
+	"/trinkets": [
+		"src/routes/trinkets/+page.server.js",
+		"src/routes/+layout.js"
+	]
 }
