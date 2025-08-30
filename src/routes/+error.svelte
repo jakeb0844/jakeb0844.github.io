@@ -1,6 +1,6 @@
 <script>
-  import { page } from '$app/stores';
-  import { Button } from 'flowbite-svelte';
+  import { page } from "$app/stores";
+  import { Button } from "flowbite-svelte";
 </script>
 
 <div class="min-h-screen flex items-center justify-center w-full">
@@ -22,8 +22,8 @@
     <!-- Flavor Text -->
     <p class="text-xl text-gray-700 dark:text-gray-400 mb-8">
       {#if $page.status === 404}
-        Looks like this page has been banished to the Twisting Nether. 
-        Perhaps a mischievous imp has made off with it?
+        Looks like this page has been banished to the Twisting Nether. Perhaps a
+        mischievous imp has made off with it?
       {:else}
         {$page.error?.message || "Something went wrong in Azeroth"}
       {/if}
@@ -31,8 +31,17 @@
 
     <!-- Return Home Button -->
     <Button href="/" class="mx-auto">
-      <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+      <svg
+        class="w-5 h-5 mr-2"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
+          clip-rule="evenodd"
+        />
       </svg>
       Return to Stormwind
     </Button>

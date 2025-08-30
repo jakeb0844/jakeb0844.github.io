@@ -1,33 +1,24 @@
 {
   ".svelte-kit/generated/server/internal.js": {
     "file": "internal.js",
-    "imports": [
-      "_internal.js"
-    ],
+    "imports": ["_internal.js"],
     "isEntry": true,
     "src": ".svelte-kit/generated/server/internal.js"
   },
   "_Frame.js": {
     "file": "chunks/Frame.js",
-    "imports": [
-      "_ssr.js",
-      "_names.js"
-    ]
+    "imports": ["_ssr.js", "_names.js"]
   },
   "_index.js": {
     "file": "chunks/index.js"
   },
   "_index2.js": {
     "file": "chunks/index2.js",
-    "imports": [
-      "_ssr.js"
-    ]
+    "imports": ["_ssr.js"]
   },
   "_internal.js": {
     "file": "chunks/internal.js",
-    "imports": [
-      "_ssr.js"
-    ]
+    "imports": ["_ssr.js"]
   },
   "_names.js": {
     "file": "chunks/names.js"
@@ -37,20 +28,13 @@
   },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
-    "imports": [
-      "_internal.js",
-      "_index.js",
-      "_index2.js"
-    ],
+    "imports": ["_internal.js", "_index.js", "_index2.js"],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js"
   },
   "src/routes/+error.svelte": {
     "file": "entries/pages/_error.svelte.js",
-    "imports": [
-      "_ssr.js",
-      "_names.js"
-    ],
+    "imports": ["_ssr.js", "_names.js"],
     "isEntry": true,
     "src": "src/routes/+error.svelte"
   },
@@ -64,16 +48,9 @@
     "src": "src/routes/+layout.js"
   },
   "src/routes/+layout.svelte": {
-    "css": [
-      "_app/immutable/assets/_layout.3a3be5e7.css"
-    ],
+    "css": ["_app/immutable/assets/_layout.3a3be5e7.css"],
     "file": "entries/pages/_layout.svelte.js",
-    "imports": [
-      "_ssr.js",
-      "_Frame.js",
-      "_index2.js",
-      "_names.js"
-    ],
+    "imports": ["_ssr.js", "_Frame.js", "_index2.js", "_names.js"],
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
   },
@@ -87,30 +64,21 @@
     "src": "src/routes/+page.server.js"
   },
   "src/routes/+page.svelte": {
-    "css": [
-      "_app/immutable/assets/_page.a5f2f089.css"
-    ],
+    "css": ["_app/immutable/assets/_page.a5f2f089.css"],
     "file": "entries/pages/_page.svelte.js",
-    "imports": [
-      "_ssr.js",
-      "_Frame.js"
-    ],
+    "imports": ["_ssr.js", "_Frame.js"],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
   },
   "src/routes/trinkets/+page.server.js": {
     "file": "entries/pages/trinkets/_page.server.js",
-    "imports": [
-      "_index.js"
-    ],
+    "imports": ["_index.js"],
     "isEntry": true,
     "src": "src/routes/trinkets/+page.server.js"
   },
   "src/routes/trinkets/+page.svelte": {
     "file": "entries/pages/trinkets/_page.svelte.js",
-    "imports": [
-      "_ssr.js"
-    ],
+    "imports": ["_ssr.js"],
     "isEntry": true,
     "src": "src/routes/trinkets/+page.svelte"
   }
