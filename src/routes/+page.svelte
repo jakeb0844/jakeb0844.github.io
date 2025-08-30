@@ -3,6 +3,7 @@
 	import RssServer from '$lib/components/RssServer.svelte';
 	import { bgTheme } from '$lib/stores/bgTheme.js';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -12,6 +13,7 @@
 
 	/** @type {HTMLElement | null} */
 	let heroSection;
+	let pageReady = false;
 
 	function handleScroll() {
 		const y = window.scrollY || 0;
@@ -37,12 +39,14 @@
 	}
 
 	onMount(() => {
+		pageReady = true;
 		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 </script>
 
-<div class="min-h-screen">
+{#if pageReady}
+	<div class="min-h-screen" in:fade={{ duration: 400 }}>
 	<!-- Hero Section with Header Image and overlay -->
 	<section bind:this={heroSection} class="relative h-[500px] mb-8 overflow-hidden">
 		<div
@@ -91,4 +95,5 @@
 			</div>
 		</div>
 	</div>
-</div>
+	</div>
+{/if}

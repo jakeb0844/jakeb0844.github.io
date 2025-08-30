@@ -56,12 +56,12 @@
   </main>
 
   <footer class="mt-12 border-t border-wow-gold/20 bg-wow-navy">
-    <div class="px-6 py-6 mx-auto w-full md:w-3/4 text-wow-lightgold">
+    <div class="px-6 py-6 mx-auto text-wow-lightgold">
       <div class="flex flex-col gap-3 items-start md:flex-row md:items-center md:justify-between">
         <div class="text-sm">
-          <span class="opacity-80"> • Data & news courtesy of </span>
+          <span class="opacity-80">Data & news courtesy of </span>
           <a class="underline hover:text-wow-gold" href="https://www.wowhead.com" target="_blank" rel="noopener noreferrer">Wowhead</a>
-          <span class="opacity-80"> • © Blizzard Entertainment</span>
+          <span class="opacity-80"> © Blizzard Entertainment</span>
         </div>
         <nav class="flex gap-4 text-sm">
           <a class="hover:text-wow-gold" href="https://github.com/jakeb0844" target="_blank" rel="noopener noreferrer">GitHub</a>

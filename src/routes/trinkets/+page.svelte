@@ -130,9 +130,9 @@
 </script>
 
 <div class="container mx-auto px-4 py-8">
-	<h1 class="text-4xl font-bold mb-8 text-center">WoW Trinket Tier List</h1>
+	<h1 class="text-4xl font-bold mb-8 text-center text-wow-navy" style="font-family: Cinzel, serif;">WoW Trinket Tier List</h1>
 
-	<div class="mb-8">
+	<div class="mb-8 p-4 rounded-xl border backdrop-blur-sm border-wow-gold/30 bg-wow-parchment/90 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
 		<form
 			style="position:relative;"
 			class="max-w-lg mx-auto"
@@ -148,7 +148,7 @@
 				<div class="relative">
 					<button
 						id="dropdown-button"
-						class="shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+						class="shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-wow-offwhite bg-wow-navy border border-wow-gold/40 rounded-s-lg hover:bg-wow-teal focus:outline-none"
 						type="button"
 						on:click={() => (dropdownOpen = !dropdownOpen)}
 					>
@@ -172,10 +172,10 @@
 					{#if dropdownOpen}
 						<div
 							id="dropdown"
-							class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 absolute mt-1"
+							class="z-10 bg-wow-parchment border border-wow-gold/30 rounded-lg shadow-sm w-44 absolute mt-1"
 						>
 							<ul
-								class="py-2 text-sm text-gray-700 dark:text-gray-200"
+								class="py-2 text-sm text-wow-navy"
 								aria-labelledby="dropdown-button"
 							>
 								<li>
@@ -211,7 +211,7 @@
 					<input
 						type="search"
 						id="search-dropdown"
-						class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+						class="block p-2.5 w-full z-20 text-sm text-wow-navy bg-wow-parchment rounded-e-lg border border-wow-gold/40 focus:ring-0 focus:border-wow-gold"
 						placeholder={mode === 'spec'
 							? 'Search specs...'
 							: 'Search trinkets...'}
@@ -228,7 +228,7 @@
 					/>
 					<button
 						type="submit"
-						class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+						class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-wow-offwhite bg-wow-navy rounded-e-lg border border-wow-gold/40 hover:bg-wow-teal focus:outline-none"
 					>
 						<svg
 							class="w-4 h-4"
@@ -256,7 +256,7 @@
 				>
 					{#each filteredSpecs as s}
 						<button
-							class="w-full text-left hover:bg-white/10 transition-colors p-2 rounded hover:bg-black/10"
+							class="w-full text-left transition-colors p-2 rounded hover:bg-wow-parchment/60"
 							on:click={() => {
 								selectedSpec = `${s.className} ${s.specName}`;
 								searchTerm = `${s.className} ${s.specName}`;
@@ -267,7 +267,7 @@
 						</button>
 					{/each}
 					{#if filteredSpecs.length === 0}
-						<p class="text-center text-gray-400">
+						<p class="text-center text-wow-navy/60">
 							No specs match that search.
 						</p>
 					{/if}
@@ -280,7 +280,7 @@
 				>
 					{#each filteredTrinkets as t}
 						<button
-							class="flex gap-1 w-full text-left hover:bg-white/10 transition-colors p-2 rounded hover:bg-black/10"
+							class="flex gap-1 w-full text-left transition-colors p-2 rounded hover:bg-wow-parchment/60"
 							on:click={() => {
 								selectedTrinket = t;
 								searchTerm = t.name || '';
@@ -297,7 +297,7 @@
 						</button>
 					{/each}
 					{#if filteredTrinkets.length === 0}
-						<p class="text-center text-gray-400">
+						<p class="text-center text-wow-navy/60">
 							No trinkets match that search.
 						</p>
 					{/if}
@@ -358,11 +358,11 @@
 					/>
 					<a
 						href={selectedTrinket.href}
-						class="text-blue-400 hover:text-blue-300"
+						class="text-wow-navy hover:text-wow-teal"
 						>{selectedTrinket.name}</a
 					>
 					<button
-						class="ml-auto text-sm text-gray-300 hover:text-white"
+						class="ml-auto text-sm text-wow-navy/70 hover:text-wow-navy"
 						on:click={() => {
 							selectedTrinket = null;
 						}}>Clear</button
@@ -411,17 +411,17 @@
 						>
 							{#each currentTierList[tier] || [] as trinket}
 								<div
-									class="trinket-card bg-white/5 backdrop-blur-sm p-4 rounded-lg flex items-center space-x-4 hover:bg-white/10 transition-colors"
+									class="trinket-card bg-wow-parchment/90 backdrop-blur-sm p-4 rounded-lg flex items-center space-x-4 border border-wow-gold/20 hover:bg-wow-parchment shadow-sm transition-transform hover:scale-[1.01]"
 								>
 									<img
 										src={trinket.iconUrl}
 										alt={trinket.name}
-										class="w-12 h-12"
+										class="w-12 h-12 rounded-md ring-1 ring-wow-gold/30"
 									/>
 									<a
 										href={trinket.href}
 										data-wowhead={`item=${trinket.id}`}
-										class="text-blue-400 hover:text-blue-300"
+										class="text-wow-navy hover:text-wow-teal"
 									>
 										{trinket.name}
 									</a>
