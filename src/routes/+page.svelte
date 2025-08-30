@@ -56,7 +56,7 @@
       class="relative h-[500px] mb-8 overflow-hidden"
     >
       <div
-        class="absolute inset-0 will-change-transform"
+        class="absolute inset-0 will-change-transform saturate-125 contrast-110"
         style="background-image: url('wow-background.jpg'); background-size: cover; background-position: center 52%; transform: translateY(var(--parallax, 0px));"
       />
       <div
@@ -114,7 +114,7 @@
               decisions about your gear choices.
             </p>
           </Card>
-          <Card
+          <!-- <Card
             href="/specs"
             class="!bg-wow-navy/90 hover:!bg-wow-teal transition-all duration-200 ease-in-out border border-wow-gold/30 hover:scale-[1.02] shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
           >
@@ -128,7 +128,7 @@
               Stay up-to-date with the latest trinket rankings and make informed
               decisions about your gear choices.
             </p>
-          </Card>
+          </Card> -->
         </div>
       </div>
     </div>

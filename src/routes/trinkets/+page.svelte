@@ -45,9 +45,11 @@
 			.includes(searchTerm.toLowerCase())
 	);
 
-	$: filteredTrinkets = allTrinkets.filter((t) =>
-		(t.name || '').toLowerCase().includes(searchTerm.toLowerCase())
-	);
+	const filteredTrinkets = allTrinkets;
+
+	// $: filteredTrinkets = allTrinkets.filter((t) =>
+	// 	(t.name || '').toLowerCase().includes(searchTerm.toLowerCase())
+	// );
 
 	// If searching specs and the filter yields exactly one match, auto-select it
 	$: if (mode === 'spec') {
@@ -169,17 +171,31 @@
 		const t = event.detail;
 		if (!t) return;
 		selectedTrinket = t;
-		searchTerm = t.name || '';
+		//searchTerm = t.name || '';
 	}
 </script>
 
 <div class="container px-4 py-8 mx-auto">
-	<h1
-		class="mb-8 text-4xl font-bold text-center text-wow-navy"
-		style="font-family: Cinzel, serif;"
-	>
-		Trinket Tier List
-	</h1>
+	<div>
+		<h1
+			class="mb-8 text-4xl font-bold text-center text-wow-navy"
+			style="font-family: Cinzel, serif;"
+		>
+			Trinket Tier List
+		</h1>
+		<p class="mb-8 text-wow-navy"
+    style="font-family: Cinzel, serif;">
+			This page is built to make browsing and comparing trinkets simple
+			and visual. Use the dropdown to switch between categories, or type
+			in the search bar to quickly find a specific trinket. Each icon
+			above represents an available trinket—clicking or hovering over them
+			highlights where they fall within the tier list below. The tier
+			sections update to show how a chosen trinket compares to others,
+			giving you a clear snapshot of its current standing. As new patches
+			and balance changes are released, the list will be updated so you
+			always have the most accurate view of what’s strong right now.
+		</p>
+	</div>
 
 	<SearchControls
 		{mode}
@@ -195,35 +211,37 @@
 	/>
 
 	{#if mode === 'spec'}
-  <div class="flex flex-col gap-8">
-		<SpecGrid
-			{filteredSpecs}
-			{selectedSpec}
-			on:selectSpec={(e) => selectSpec(e.detail)}
-		/>
-		{#if hasTierItems}
-			<SpecTierList {currentTierList} {tiers} {tierColors} />
-		{:else if selectedSpec}
-			<p class="text-center">
-				No tier list data available for {selectedSpec}
-			</p>
-		{/if}
-    </div>
+		<div class="flex flex-col gap-8">
+			<SpecGrid
+				{filteredSpecs}
+				{selectedSpec}
+				on:selectSpec={(e) => selectSpec(e.detail)}
+			/>
+			{#if hasTierItems}
+				<SpecTierList {currentTierList} {tiers} {tierColors} />
+			{:else if selectedSpec}
+				<p class="text-center">
+					No tier list data available for {selectedSpec}
+				</p>
+			{/if}
+		</div>
 	{/if}
 
 	{#if mode === 'trinket'}
-		<TrinketGrid
-			{filteredTrinkets}
-			{selectedTrinket}
-			on:selectTrinket={handleSelectTrinket}
-		/>
+		<div class="flex flex-col gap-8">
+			<TrinketGrid
+				{filteredTrinkets}
+				{selectedTrinket}
+				on:selectTrinket={handleSelectTrinket}
+			/>
 
-		<TrinketDetails
-			{selectedTrinket}
-			{trinketTierResults}
-			{tiers}
-			{tierColors}
-			on:clear={() => (selectedTrinket = null)}
-		/>
+			<TrinketDetails
+				{selectedTrinket}
+				{trinketTierResults}
+				{tiers}
+				{tierColors}
+				on:clear={() => (selectedTrinket = null)}
+			/>
+		</div>
 	{/if}
 </div>
