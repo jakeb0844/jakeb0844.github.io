@@ -9,6 +9,7 @@
   const dispatch = createEventDispatcher();
 
   function choose(label) {
+    if (selectedSpec === label) return; // ignore re-click on the same spec
     dispatch("selectSpec", label);
   }
 </script>

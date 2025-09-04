@@ -71,10 +71,11 @@
 	// When selecting a trinket, compute how each spec ranks it per tier
 	$: trinketTierResults = (() => {
 		if (!selectedTrinket) return null;
-		const results = { s: [], a: [], b: [], c: [], d: [], f: [] };
+		const results = {};
+		for (const key of tiers) results[key] = [];
 		for (const spec of trinketData) {
 			if (!spec.tierList) continue;
-			for (const tierKey of ['s', 'a', 'b', 'c', 'd', 'f']) {
+			for (const tierKey of tiers) {
 				const list = spec.tierList[tierKey] || [];
 				if (
 					list.some(
@@ -95,14 +96,26 @@
 		return results;
 	})();
 
-	const tiers = ['s', 'a', 'b', 'c', 'd', 'f'];
+	const tiers = ['s+', 's', 's-', 'a+', 'a', 'a-', 'b+', 'b', 'b-', 'c+', 'c', 'c-', 'd+', 'd', 'd-', 'f+', 'f', 'f-'];
 	const tierColors = {
+		's+': 'text-yellow-600',
 		s: 'text-yellow-600',
+		's-': 'text-yellow-600',
+		'a+': 'text-purple-600',
 		a: 'text-purple-600',
+		'a-': 'text-purple-600',
+		'b+': 'text-blue-600',
 		b: 'text-blue-600',
+		'b-': 'text-blue-600',
+		'c+': 'text-green-600',
 		c: 'text-green-600',
+		'c-': 'text-green-600',
+		'd+': 'text-orange-600',
 		d: 'text-orange-600',
+		'd-': 'text-orange-600',
+		'f+': 'text-red-600',
 		f: 'text-red-600',
+		'f-': 'text-red-600',
 	};
 
 	$: hasTierItems =
@@ -218,7 +231,7 @@
 				on:selectSpec={(e) => selectSpec(e.detail)}
 			/>
 			{#if hasTierItems}
-				<SpecTierList {currentTierList} {tiers} {tierColors} />
+				<SpecTierList {currentTierList} {tiers} {tierColors} specLabel={selectedSpec} />
 			{:else if selectedSpec}
 				<p class="text-center">
 					No tier list data available for {selectedSpec}

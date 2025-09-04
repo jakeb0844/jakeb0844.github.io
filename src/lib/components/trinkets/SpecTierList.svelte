@@ -3,10 +3,14 @@
 	export let currentTierList = null;
 	export let tiers = [];
 	export let tierColors = {};
+	export let specLabel = '';
 </script>
 
 {#if currentTierList}
 	<div class="p-4 space-y-8 rounded-lg backdrop-blur-sm bg-wow-parchment/90">
+		{#if specLabel}
+			<h2 class="text-3xl font-bold text-wow-navy mb-2">{specLabel}</h2>
+		{/if}
 		{#each tiers as tier}
 			{#if currentTierList[tier]?.length}
 				<div class="tier-section">

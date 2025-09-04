@@ -19,31 +19,29 @@
 		</div>
 		{#if trinketTierResults}
 			{#each tiers as tier}
-				<div class="mb-4">
-					<h3
-						class="text-xl font-semibold drop-shadow-md border-b-2 border-current pb-1 mb-2 {tierColors[
-							tier
-						]}"
-					>
-						<span class="bg-[currentColor]/10 px-2 py-0.5 rounded"
-							>{tier.toUpperCase()} Tier</span
+				{#if trinketTierResults[tier]?.length}
+					<div class="mb-4">
+						<h3
+							class="text-xl font-semibold drop-shadow-md border-b-2 border-current pb-1 mb-2 {tierColors[
+								tier
+							]}"
 						>
-					</h3>
-					{#if trinketTierResults[tier].length}
+							<span class="bg-[currentColor]/10 px-2 py-0.5 rounded"
+								>{tier.toUpperCase()} Tier</span
+							>
+						</h3>
 						<div class="flex flex-wrap gap-2">
 							{#each trinketTierResults[tier] as s}
 								<SpecIcon
 									className={s.className}
 									specName={s.specName}
 									selected={false}
-                  dimUnselected={false}
+					          dimUnselected={false}
 								/>
 							{/each}
 						</div>
-					{:else}
-						<p class="text-gray-400">No specs</p>
-					{/if}
-				</div>
+					</div>
+				{/if}
 			{/each}
 		{/if}
 	</div>

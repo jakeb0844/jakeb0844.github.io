@@ -17,10 +17,17 @@
       window.$WowheadPower.refreshLinks();
     }
   });
+
+  // Sort A-Z by trinket name (case-insensitive)
+  $: sortedTrinkets = [...(filteredTrinkets || [])].sort((a, b) =>
+    (a?.name || "").localeCompare(b?.name || "", undefined, {
+      sensitivity: "base",
+    })
+  );
 </script>
 
 <div class="flex flex-wrap gap-4 justify-center mx-auto max-w-6xl">
-  {#each filteredTrinkets as t ((t.name || "").toLowerCase())}
+  {#each sortedTrinkets as t ((t.name || "").toLowerCase())}
     <TrinketIcon
       href={t.href}
       id={t.id}
