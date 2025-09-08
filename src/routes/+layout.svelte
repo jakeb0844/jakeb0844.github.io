@@ -8,8 +8,9 @@
     NavHamburger,
   } from "flowbite-svelte";
   import { injectAnalytics } from '@vercel/analytics/sveltekit';
+  import { dev } from '$app/environment';
 
-  injectAnalytics();
+  injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="min-h-screen flex flex-col dark:bg-gray-900 bg-[#ece2c7]">
