@@ -125,8 +125,7 @@
               Specs
             </h3>
             <p class="text-wow-lightgold">
-              Stay up-to-date with the latest trinket rankings and make informed
-              decisions about your gear choices.
+              Forge your path to power. This codex ranks your stats, crowns your BiS, and judges every trinket—kept fresh with each patch.
             </p>
           </Card>
         </div>

@@ -206,21 +206,21 @@
 	<title>
 		{selectedSpec
 			? `${selectedSpec} - Best in Slot & Trinket Tier List`
-			: 'Specs - Trinkets, BiS & Tier Lists'}
+			: 'Spec Compendium - Stats, BiS & Trinket Tier Lists'}
 	</title>
 	<meta
 		name="description"
 		content={selectedSpec
 			? `BiS gear, stat priorities, and trinket tier list for ${selectedSpec}.`
-			: 'Browse specs to see BiS gear, stat priorities, and trinket tier lists.'}
+			: 'Browse every class and spec in one place. See current stat priorities, Best‑in‑Slot gear, and trinket rankings at a glance.'}
 	/>
 	<meta
 		property="og:title"
-		content={selectedSpec ? `${selectedSpec} - BiS & Trinkets` : 'Specs - BiS & Trinkets'}
+		content={selectedSpec ? `${selectedSpec} - BiS & Trinkets` : 'Spec Compendium - BiS & Trinkets'}
 	/>
 	<meta
 		property="og:description"
-		content={selectedSpec ? `BiS gear and trinket rankings for ${selectedSpec}.` : 'Compare specs and view trinket rankings.'}
+		content={selectedSpec ? `BiS gear and trinket rankings for ${selectedSpec}.` : 'Compare specs and view trinket rankings with up‑to‑date patch changes.'}
 	/>
 </svelte:head>
 
@@ -230,18 +230,12 @@
 			class="mb-8 text-4xl font-bold text-center text-wow-navy"
 			style="font-family: Cinzel, serif;"
 		>
-			Specs
+			Class Almanac
 		</h1>
 		<p class="mb-8 text-wow-navy" style="font-family: Cinzel, serif;">
-			This page is built to make browsing and comparing trinkets simple
-			and visual. Use the dropdown to switch between categories, or type
-			in the search bar to quickly find a specific trinket. Each icon
-			above represents an available trinket—clicking or hovering over them
-			highlights where they fall within the tier list below. The tier
-			sections update to show how a chosen trinket compares to others,
-			giving you a clear snapshot of its current standing. As new patches
-			and balance changes are released, the list will be updated so you
-			always have the most accurate view of what’s strong right now.
+			Explore every class and spec in a single view. Check stat priorities,
+			Best‑in‑Slot gear, and trinket rankings at a glance. Deep‑link to any
+			spec and share it, and come back as patches land—the data stays fresh.
 		</p>
 	</div>
 

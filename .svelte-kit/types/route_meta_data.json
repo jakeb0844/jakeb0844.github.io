@@ -1,15 +1,11 @@
 {
 	"/": [
-		"src/routes/+page.server.js",
-		"src/routes/+layout.js",
-		"src/routes/+layout.js"
+		"src/routes/+page.server.js"
 	],
 	"/specs": [
-		"src/routes/specs/+page.server.js",
-		"src/routes/+layout.js"
+		"src/routes/specs/+page.server.js"
 	],
 	"/trinkets": [
-		"src/routes/trinkets/+page.server.js",
-		"src/routes/+layout.js"
+		"src/routes/trinkets/+page.server.js"
 	]
 }
