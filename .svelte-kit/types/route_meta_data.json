@@ -5,6 +5,7 @@
 		"src/routes/+layout.js"
 	],
 	"/specs": [
+		"src/routes/specs/+page.server.js",
 		"src/routes/+layout.js"
 	],
 	"/trinkets": [

@@ -1,0 +1,973 @@
+[
+  {
+    "name": "Unholy",
+    "class": "Death Knight",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">>"
+      },
+      {
+        "name": "Haste",
+        "op": ">="
+      },
+      {
+        "name": "Mastery",
+        "op": ">="
+      },
+      {
+        "name": "Crit",
+        "op": ">>"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Frost",
+    "class": "Death Knight",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">="
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Blood",
+    "class": "Death Knight",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">>"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">="
+      },
+      {
+        "name": "Versatility",
+        "op": "="
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Balance",
+    "class": "Druid",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Havoc",
+    "class": "Demon Hunter",
+    "stats": [
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Agility"
+      }
+    ]
+  },
+  {
+    "name": "Vengeance",
+    "class": "Demon Hunter",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">>"
+      },
+      {
+        "name": "Haste",
+        "op": "="
+      },
+      {
+        "name": "Crit",
+        "op": "="
+      },
+      {
+        "name": "Versatility",
+        "op": ">="
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Guardian",
+    "class": "Druid",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Restoration",
+    "class": "Druid",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": "="
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">>"
+      },
+      {
+        "name": "Crit"
+      }
+    ]
+  },
+  {
+    "name": "Feral",
+    "class": "Druid",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">="
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Augmentation",
+    "class": "Evoker",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">>"
+      },
+      {
+        "name": "Mastery",
+        "op": ">>"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">>"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Devastation",
+    "class": "Evoker",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">="
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">="
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Preservation",
+    "class": "Evoker",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">>"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Marksmanship",
+    "class": "Hunter",
+    "stats": [
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">="
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Beast Mastery",
+    "class": "Hunter",
+    "stats": [
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">="
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Agility"
+      }
+    ]
+  },
+  {
+    "name": "Survival",
+    "class": "Hunter",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Arcane",
+    "class": "Mage",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": "="
+      },
+      {
+        "name": "Versatility",
+        "op": "="
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit"
+      }
+    ]
+  },
+  {
+    "name": "Fire",
+    "class": "Mage",
+    "stats": [
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">="
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit"
+      }
+    ]
+  },
+  {
+    "name": "Frost",
+    "class": "Mage",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">="
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Mistweaver",
+    "class": "Monk",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">>"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": "="
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Brewmaster",
+    "class": "Monk",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">>"
+      },
+      {
+        "name": "Versatility",
+        "op": "="
+      },
+      {
+        "name": "Crit",
+        "op": "="
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste"
+      }
+    ]
+  },
+  {
+    "name": "Retribution",
+    "class": "Paladin",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": "="
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Windwalker",
+    "class": "Monk",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": "="
+      },
+      {
+        "name": "Haste",
+        "op": ">>"
+      },
+      {
+        "name": "Versatility",
+        "op": "="
+      },
+      {
+        "name": "Crit"
+      }
+    ]
+  },
+  {
+    "name": "Protection",
+    "class": "Paladin",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Discipline",
+    "class": "Priest",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": "="
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">>"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Holy",
+    "class": "Paladin",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": "="
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Shadow",
+    "class": "Priest",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Outlaw",
+    "class": "Rogue",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">>"
+      },
+      {
+        "name": "Versatility",
+        "op": "="
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Holy",
+    "class": "Priest",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">>"
+      },
+      {
+        "name": "Crit",
+        "op": "="
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Haste"
+      }
+    ]
+  },
+  {
+    "name": "Assassination",
+    "class": "Rogue",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">="
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Subtlety",
+    "class": "Rogue",
+    "stats": [
+      {
+        "name": "Agility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": "="
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">>"
+      },
+      {
+        "name": "Haste"
+      }
+    ]
+  },
+  {
+    "name": "Enhancement",
+    "class": "Shaman",
+    "stats": [
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Agility"
+      }
+    ]
+  },
+  {
+    "name": "Elemental",
+    "class": "Shaman",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Crit"
+      }
+    ]
+  },
+  {
+    "name": "Restoration",
+    "class": "Shaman",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  },
+  {
+    "name": "Demonology",
+    "class": "Warlock",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">>"
+      },
+      {
+        "name": "Haste",
+        "op": "="
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Affliction",
+    "class": "Warlock",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">>"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Destruction",
+    "class": "Warlock",
+    "stats": [
+      {
+        "name": "Intellect",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": "="
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Arms",
+    "class": "Warrior",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">>"
+      },
+      {
+        "name": "Crit",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Mastery",
+        "op": "="
+      },
+      {
+        "name": "Versatility"
+      }
+    ]
+  },
+  {
+    "name": "Fury",
+    "class": "Warrior",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">>"
+      },
+      {
+        "name": "Mastery",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Crit"
+      }
+    ]
+  },
+  {
+    "name": "Protection",
+    "class": "Warrior",
+    "stats": [
+      {
+        "name": "Strength",
+        "op": ">"
+      },
+      {
+        "name": "Haste",
+        "op": ">"
+      },
+      {
+        "name": "Crit",
+        "op": ">="
+      },
+      {
+        "name": "Versatility",
+        "op": ">"
+      },
+      {
+        "name": "Mastery"
+      }
+    ]
+  }
+]
