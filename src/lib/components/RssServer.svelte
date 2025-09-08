@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   /**
    * @typedef {Object} NewsItem
    * @property {string} title
@@ -11,10 +12,58 @@
   /** @type {NewsItem[]} */
   export let items = [];
   export let title = "Latest Wowhead News";
+  export let refreshRate = (60000 * 5); // 5 minutes
+
+  /** @type {NewsItem[]} */
+  let clientItems = items;
+  let error = "";
+  /** @type {number|undefined} */
+  let refreshInterval;
+  /** @type {number|undefined} */
+  let lastUpdated;
+
+  /**
+   * @param {number|Date|undefined} ts
+   * @returns {string}
+   */
+  function formatLastUpdated(ts) {
+    if (!ts) return "";
+    const d = typeof ts === "number" ? new Date(ts) : ts;
+    return d.toLocaleString(undefined, {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
+  async function fetchLatest() {
+    try {
+      const res = await fetch("/api/news", { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (Array.isArray(data.newsItems)) {
+        clientItems = data.newsItems;
+        lastUpdated = Date.now();
+      }
+    } catch (e) {
+      error = e instanceof Error ? e.message : "Failed to refresh news";
+    }
+  }
+
+  onMount(() => {
+    if (clientItems && clientItems.length) {
+      lastUpdated = Date.now();
+    }
+    fetchLatest();
+    refreshInterval = setInterval(fetchLatest, refreshRate);
+    return () => clearInterval(refreshInterval);
+  });
 </script>
 
 <div class="w-full">
-  <div class="flex gap-4 items-baseline">
+  <div class="flex relative gap-4 items-baseline">
     <h2
       class="mb-4 text-2xl font-bold text-gray-900 dark:text-white"
       style="font-family: Cinzel, serif;"
@@ -27,10 +76,12 @@
       href="https://www.wowhead.com/news"
       target="_blank">View all →</a
     >
+
+    <span style="font-size: 10px; right:0; position: absolute;" class="text-gray-500">Last Updated: {formatLastUpdated(lastUpdated)}</span>
   </div>
-  {#if items && items.length}
+  {#if clientItems && clientItems.length}
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
-      {#each items as item, i}
+      {#each clientItems as item, i}
         <a
           href={item.link}
           rel="noopener noreferrer"

@@ -12,3 +12,23 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Nav brand yellow fill on hover */
+.brand-fill {
+  /* fallback color when background-clip isn't supported */
+  color: #f5f5f5;
+  background-image:
+    linear-gradient(#facc15, #facc15), /* top layer: yellow */
+    linear-gradient(#f5f5f5, #f5f5f5); /* base layer: offwhite */
+  background-repeat: no-repeat;
+  background-size: 0% 100%, 100% 100%;
+  background-position: left, left;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-size 300ms ease-in-out;
+}
+
+.brand-fill:hover {
+  background-size: 100% 100%, 100% 100%;
+}

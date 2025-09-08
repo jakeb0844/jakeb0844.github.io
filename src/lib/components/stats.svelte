@@ -48,7 +48,7 @@
 
 <div>
 	<h1 class="text-2xl font-bold text-wow-navy">Stats</h1>
-	<div class="flex gap-2 items-center flex-wrap">
+	<div class="flex flex-wrap gap-2 items-center">
 		{#each stats as stat}
 			<div class="flex gap-2 items-center">
 				<h2 class={getStatClass(stat.name)}>{stat.name}</h2>

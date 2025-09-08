@@ -2,6 +2,9 @@
 	"/": [
 		"src/routes/+page.server.js"
 	],
+	"/api/news": [
+		"src/routes/api/news/+server.js"
+	],
 	"/specs": [
 		"src/routes/specs/+page.server.js"
 	],

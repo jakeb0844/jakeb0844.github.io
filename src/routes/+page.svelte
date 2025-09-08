@@ -82,7 +82,7 @@
       <div class="mx-auto w-full md:w-3/4">
         <div
           use:reveal
-          class="p-4 rounded-xl border backdrop-blur-sm border-wow-gold/30 bg-wow-parchment/90 shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
+          class="p-4 mb-12 rounded-xl border backdrop-blur-sm border-wow-gold/20 bg-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.15)]"
         >
           <RssServer title="Latest Wowhead News" items={data.newsItems} />
         </div>
@@ -122,7 +122,7 @@
               class="mb-2 text-xl font-bold text-wow-offwhite"
               style="font-family: Cinzel, serif;"
             >
-              Specs
+              Class Almanac
             </h3>
             <p class="text-wow-lightgold">
               Forge your path to power. This codex ranks your stats, crowns your BiS, and judges every trinket—kept fresh with each patch.

@@ -17,17 +17,17 @@
   <Navbar class="!bg-wow-navy border-b border-wow-gold/30">
     <NavBrand href="/">
       <span
-        class="self-center text-2xl font-semibold tracking-wide whitespace-nowrap"
-        style="font-family: Cinzel, serif; color: #F5F5F5;">WoW Tools</span
+        class="self-center text-2xl font-semibold tracking-wide whitespace-nowrap brand-fill"
+        style="font-family: Cinzel, serif;">WoW Tools</span
       >
     </NavBrand>
     <NavHamburger class="text-wow-gold" />
     <NavUl>
-      <NavLi
+      <!-- <NavLi
         href="/"
         class="transition-colors text-wow-lightgold hover:text-wow-gold"
         >Home</NavLi
-      >
+      > -->
     </NavUl>
   </Navbar>
 
