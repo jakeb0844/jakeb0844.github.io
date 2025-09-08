@@ -1,6 +1,7 @@
 <script>
 	// @ts-nocheck
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 	import SearchControls from '$lib/components/trinkets/SearchControls.svelte';
 	import SpecGrid from '$lib/components/trinkets/SpecGrid.svelte';
 	import TrinketGrid from '$lib/components/trinkets/TrinketGrid.svelte';
@@ -52,6 +53,21 @@
 	);
 
 	const filteredTrinkets = allTrinkets;
+
+	let initializedFromQuery = false;
+	// Initialize from query param via $page store (one-time)
+	$: if (!initializedFromQuery) {
+		try {
+			const q = $page?.url?.searchParams?.get('spec');
+			if (q) {
+				const label = decodeURIComponent(q.replace(/\+/g, ' '));
+				if (label) {
+					selectedSpec = label;
+					initializedFromQuery = true;
+				}
+			}
+		} catch (e) {}
+	}
 
 	// If searching specs and the filter yields exactly one match, auto-select it
 	$: if (selectedSpec) {
@@ -114,26 +130,66 @@
 		!!currentTierList &&
 		tiers.some((tier) => (currentTierList[tier]?.length || 0) > 0);
 
+	function debounce(fn, wait) {
+		let t;
+		return (...args) => {
+			clearTimeout(t);
+			t = setTimeout(() => fn(...args), wait);
+		};
+	}
+
 	onMount(() => {
-		// Initialize Wowhead tooltips
-		const script = document.createElement('script');
-		script.src = 'https://wow.zamimg.com/widgets/power.js';
-		document.head.appendChild(script);
+		// Load Wowhead tooltip script once and initialize selected spec from URL/localStorage
+		if (typeof window !== 'undefined') {
+			const existing = document.querySelector(
+				'script[src="https://wow.zamimg.com/widgets/power.js"]'
+			);
+			if (!window.$WowheadPower && !existing) {
+				const script = document.createElement('script');
+				script.src = 'https://wow.zamimg.com/widgets/power.js';
+				document.head.appendChild(script);
+			}
+
+			try {
+				const url = new URL(window.location.href);
+				const specParam = url.searchParams.get('spec');
+				const initial = specParam
+					? decodeURIComponent(specParam.replace(/\+/g, ' '))
+					: localStorage.getItem('selectedSpec') || '';
+				if (initial) selectedSpec = initial;
+			} catch (e) {}
+		}
 	});
 
 	function refreshWowheadTooltips() {
-		if (window && window.$WowheadPower) {
+		if (typeof window !== 'undefined' && window.$WowheadPower) {
 			window.$WowheadPower.refreshLinks();
 		}
 	}
+	const refreshWowheadTooltipsDebounced = debounce(() => refreshWowheadTooltips(), 150);
 
 	$: if (currentTierList) {
 		// Refresh tooltips whenever the tier list changes
-		setTimeout(refreshWowheadTooltips, 100);
+		refreshWowheadTooltipsDebounced();
+	}
+
+	// Sync selectedSpec to URL and localStorage
+	$: if (typeof window !== 'undefined') {
+		try {
+			const url = new URL(window.location.href);
+			if (selectedSpec) {
+				url.searchParams.set('spec', selectedSpec);
+				history.replaceState(null, '', url);
+				try { localStorage.setItem('selectedSpec', selectedSpec); } catch {}
+			} else {
+				url.searchParams.delete('spec');
+				history.replaceState(null, '', url);
+				try { localStorage.removeItem('selectedSpec'); } catch {}
+			}
+		} catch (e) {}
 	}
 
 	function selectSpec(specName) {
-		console.log('onclick', specName);
 		selectedSpec = selectedSpec === specName ? '' : specName;
 	}
 
@@ -145,6 +201,28 @@
 		//searchTerm = label;
 	}
 </script>
+
+<svelte:head>
+	<title>
+		{selectedSpec
+			? `${selectedSpec} - Best in Slot & Trinket Tier List`
+			: 'Specs - Trinkets, BiS & Tier Lists'}
+	</title>
+	<meta
+		name="description"
+		content={selectedSpec
+			? `BiS gear, stat priorities, and trinket tier list for ${selectedSpec}.`
+			: 'Browse specs to see BiS gear, stat priorities, and trinket tier lists.'}
+	/>
+	<meta
+		property="og:title"
+		content={selectedSpec ? `${selectedSpec} - BiS & Trinkets` : 'Specs - BiS & Trinkets'}
+	/>
+	<meta
+		property="og:description"
+		content={selectedSpec ? `BiS gear and trinket rankings for ${selectedSpec}.` : 'Compare specs and view trinket rankings.'}
+	/>
+</svelte:head>
 
 <div class="container px-4 py-8 mx-auto">
 	<div>
